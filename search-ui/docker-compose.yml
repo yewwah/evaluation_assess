@@ -1,0 +1,17 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - es-network
+    env_file:
+      - prod.env
+    container_name: search-ui
+
+networks:
+  es-network:
+    external : true
