@@ -1,0 +1,10 @@
+# docker-compose.yml
+version: '1'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    container_name: search-ui
