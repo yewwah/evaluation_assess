@@ -24,7 +24,7 @@ services:
       - es_data_1:/var/lib/elasticsearch/data
     networks:
       - es-network
-
+    container_name: elastic_1
   es-node2:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.17.18
     depends_on:
@@ -51,7 +51,7 @@ services:
       - es-network
     volumes:
       - es_data_2:/var/lib/elasticsearch/data
-    
+    container_name: elastic_2
 networks:
   es-network:
     external: true

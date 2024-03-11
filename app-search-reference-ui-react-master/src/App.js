@@ -43,19 +43,26 @@ const config = {
       duration: {}
     },
     result_fields: {
-      generated_text: {
+      // filename,text,up_votes,down_votes,age,gender,accent,duration,generated_text
+      filename: {
         snippet: {}
       },
-      age: {
+      text: {
+      },
+      up_votes: {
+      },
+      down_votes: {
+      },
+      age:{
         snippet: {}
       },
-      accent: {
-        snippet: {}
-      },
-      gender: {
+      gender:{
         snippet: {}
       },
       duration:{
+        snippet: {}
+      },
+      generated_text:{
         snippet: {}
       },
     },
@@ -64,7 +71,6 @@ const config = {
       "generated_text.keyword": { type: "value" },
       "duration.keyword": { type: "value" },
       "age.keyword": { type: "value" },
-      
     }
   },
   autocompleteQuery: {
