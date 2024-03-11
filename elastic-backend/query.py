@@ -4,7 +4,7 @@ import requests
 elasticsearch_url = "http://localhost:9200"
 
 # Index name
-index_name = "cv-transcriptions_1"
+index_name = "cv-transcriptions"
 
 def search_index(query):
     search_url = f"{elasticsearch_url}/{index_name}/_search"

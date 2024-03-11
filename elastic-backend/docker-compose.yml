@@ -9,7 +9,10 @@ services:
       - cluster.name=my-cluster
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
-      - xpack.security.enabled=false  # Disable X-Pack Security
+      - http.cors.enabled=true
+      - http.cors.allow-origin=*
+      - node.master=true
+      - node.data=true
     ulimits:
       memlock:
         soft: -1
@@ -18,9 +21,9 @@ services:
     ports:
       - "9200:9200"
     volumes:
-      - ./es_data_1:/var/lib/elasticsearch/data
+      - es_data_1:/var/lib/elasticsearch/data
     networks:
-      - es-net
+      - es-network
 
   es-node2:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.17.18
@@ -33,17 +36,28 @@ services:
       - cluster.name=my-cluster
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
-      - xpack.security.enabled=false  # Disable X-Pack Security
+      - http.cors.enabled=true
+      - http.cors.allow-origin=*
+      - node.master=true
+      - node.data=true
     ulimits:
       memlock:
         soft: -1
         hard: -1
     mem_limit: 1g
+    ports : 
+      - 9201:9200
     networks:
-      - es-net
+      - es-network
     volumes:
-      - ./es_data_2:/var/lib/elasticsearch/data
+      - es_data_2:/var/lib/elasticsearch/data
     
 networks:
-  es-net:
+  es-network:
     external: true
+
+volumes:
+  es_data_1:
+    driver: local
+  es_data_2:
+    driver: local

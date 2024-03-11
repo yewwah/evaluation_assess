@@ -5,7 +5,7 @@ import csv
 es = Elasticsearch(['http://localhost:9200'])
 
 # Index name
-index_name = "cv-transcriptions_1"
+index_name = "cv-transcriptions"
 
 # CSV file path
 csv_file_path = "cv-valid-dev.csv"  # Replace with your actual CSV file path

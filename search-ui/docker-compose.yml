@@ -4,14 +4,14 @@ services:
   appsearch:
     image: docker.elastic.co/app-search/app-search:7.6.2
     environment:
-      - "elasticsearch.host=http://elasticsearch:9200"
+      - "elasticsearch.host=http://es-node1:9200"
       - "allow_es_settings_modification=true"
       - "JAVA_OPTS=-Xmx512m -Xms512m"
     ports:
       - "3002:3002"
     networks:
-      - es-net
+      - es-network
 
 networks:
-  es-net:
+  es-network:
     external: true
