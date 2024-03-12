@@ -136,8 +136,8 @@ export default function App() {
           <Facet key={"1"} field={"generated_text.keyword"} label={"generated_text"} />
           <Facet key={"2"} field={"age.keyword"} label={"age"} />
           <Facet key={"3"} field={"duration.keyword"} label={"duration"} />
-          <Facet key={"4"} field={"age.keyword"} label={"age"} />
-          <Facet key={"4"} field={"accent.keyword"} label={"accent"} />
+          <Facet key={"4"} field={"gender.keyword"} label={"gender"} />
+          <Facet key={"5"} field={"accent.keyword"} label={"accent"} />
         </div>
       }
       bodyContent={<Results shouldTrackClickThrough={true} />}
