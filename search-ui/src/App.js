@@ -26,6 +26,15 @@ import {
   getFacetFields
 } from "./config/config-helper";
 
+// const express = require('express');
+// const cors = require('cors');
+
+// const app = express();
+
+// // Enable CORS for all routes
+// app.use(cors());
+
+
 const { hostIdentifier, searchKey, endpointBase, engineName } = getConfig();
 const connector = new ElasticsearchAPIConnector({
   host: "http://localhost:9200",
