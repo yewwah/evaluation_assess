@@ -4,13 +4,11 @@ FROM node:16.13
 # Set the working directory
 WORKDIR /app
 
-# Add the @elastic/search-ui-elasticsearch-connector package
-RUN npm add @elastic/search-ui-elasticsearch-connector
-
 # Copy the entire current directory into the working directory
 COPY ./ /app
 
-# Set environment variables, if needed
+# Add the @elastic/search-ui-elasticsearch-connector package
+RUN npm add @elastic/search-ui-elasticsearch-connector
 
 # Expose the necessary ports, if needed
 EXPOSE 3000
