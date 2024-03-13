@@ -1,5 +1,6 @@
 from typing import Dict
-from fastapi import FastAPI, File, UploadFile, Form
+from fastapi import FastAPI, File, UploadFile
+from fastapi.responses import JSONResponse
 import librosa
 import io
 from transformers import pipeline
@@ -12,10 +13,14 @@ def ping() -> str:
     return 'pong'
 
 @app.post("/asr")
-def upload_file(file: UploadFile = File(...)):
+def upload_file(file: UploadFile = File(...), sr=16000) -> Dict[str, str]:
     """
-    Endpoint to upload a file via form data.
+    Endpoint to upload an audio file via form data and return the transcribed text
     """
-    audio_data, _ = librosa.load(file.file, sr=16000)
-    return pipe(audio_data)['text']
+    # Loading the 
+    audio_data, _ = librosa.load(file.file, sr=sr)
+    duration = librosa.get_duration(y=audio_data, sr=sr)
+    transcribed = pipe(audio_data)['text']
+    return JSONResponse(content={"transcription": transcribed, "duration_seconds": duration})
+    
 
