@@ -21,6 +21,6 @@ def upload_file(file: UploadFile = File(...), sr=16000) -> Dict[str, str]:
     audio_data, _ = librosa.load(file.file, sr=sr)
     duration = librosa.get_duration(y=audio_data, sr=sr)
     transcribed = pipe(audio_data)['text']
-    return JSONResponse(content={"transcription": transcribed, "duration_seconds": duration})
+    return JSONResponse(content={"transcription": transcribed, "duration": duration})
     
 
