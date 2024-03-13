@@ -9,7 +9,7 @@ services:
     networks:
       - es-network
     env_file:
-      - ./prod.env
+      - prod.env
     container_name: search-ui
 
 networks:

@@ -26,10 +26,10 @@ import {
   getFacetFields
 } from "./config/config-helper";
 
-const host = process.env.ELASTIC_HOST
+const host_url = process.env.REACT_APP_ELASTIC_HOST
 const { hostIdentifier, searchKey, endpointBase, engineName } = getConfig();
 const connector = new ElasticsearchAPIConnector({
-  host: {host},
+  host: host_url,
   index: "cv-transcriptions"
 });
 const config = {
