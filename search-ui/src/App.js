@@ -26,18 +26,10 @@ import {
   getFacetFields
 } from "./config/config-helper";
 
-// const express = require('express');
-// const cors = require('cors');
-
-// const app = express();
-
-// // Enable CORS for all routes
-// app.use(cors());
-
-
+const host_url = process.env.REACT_APP_ELASTIC_HOST
 const { hostIdentifier, searchKey, endpointBase, engineName } = getConfig();
 const connector = new ElasticsearchAPIConnector({
-  host: "http://localhost:9200",
+  host: host_url,
   index: "cv-transcriptions"
 });
 const config = {
