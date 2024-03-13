@@ -15,7 +15,6 @@ pipe = pipeline("automatic-speech-recognition", model="facebook/wav2vec2-large-9
 
 # Transcribing based on zip files
 def transcribe(fname : str) -> str:
-    print('cv-valid-dev/' + fname)
     # Loading the audio
     audio, _ = librosa.load('cv-valid-dev/' + fname, sr = 16000)
     # returning the result 
