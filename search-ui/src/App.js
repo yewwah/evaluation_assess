@@ -29,7 +29,7 @@ import {
 const host = process.env.ELASTIC_HOST
 const { hostIdentifier, searchKey, endpointBase, engineName } = getConfig();
 const connector = new ElasticsearchAPIConnector({
-  host: host,
+  host: {host},
   index: "cv-transcriptions"
 });
 const config = {
