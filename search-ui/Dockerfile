@@ -5,7 +5,10 @@ FROM node:16.13
 WORKDIR /app
 
 # Copy the entire current directory into the working directory
-COPY ./ /app
+COPY . .
+
+# Install the libraries
+RUN npm install
 
 # Add the @elastic/search-ui-elasticsearch-connector package
 RUN npm add @elastic/search-ui-elasticsearch-connector
