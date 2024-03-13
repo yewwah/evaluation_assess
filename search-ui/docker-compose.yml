@@ -9,6 +9,9 @@ services:
     container_name: search-ui
     networks:
       - es-network
+    env_file:
+      - prod.env
+
 
 networks:
   es-network:
