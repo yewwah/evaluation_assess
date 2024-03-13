@@ -1,6 +1,7 @@
 from typing import Dict
 from fastapi import FastAPI, File, UploadFile, Form
 import librosa
+import io
 from transformers import pipeline
 
 app = FastAPI()
@@ -15,13 +16,6 @@ def upload_file(file: UploadFile = File(...)):
     """
     Endpoint to upload a file via form data.
     """
-    audio, _ = librosa.load(file)
-    return pipe(audio)['text']
+    audio_data, _ = librosa.load(file.file, sr=16000)
+    return pipe(audio_data)['text']
 
-@app.post('/asr123')
-def create_item(file: str = Form(...)):
-    print(file)
-    return {
-        "transcription": "BEFORE HE HAD TIME TO ANSWER A MUCH ENCUMBERED VERA BURST INTO THE ROOM",
-        "duration" : "20.7"
-    }
