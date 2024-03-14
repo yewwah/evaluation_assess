@@ -5,4 +5,4 @@ python-multipart==0.0.9
 transformers==4.38.2
 librosa==0.10.1
 torch==2.2.1
-tqdm
+tqdm==4.66.2
