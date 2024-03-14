@@ -8,8 +8,8 @@ This README documents the steps to run task 2. This folder uses FastAPI framewor
 
 ## Steps to run the folder
 
-1. Run the command `docker build -t asr-api .`
-2. Run the command `docker run -p 8001:8001 --name -d asr-api`
+1. Run the command `docker build -t asr .`
+2. Run the command `docker run -p 8001:8001 --name asr-api -d asr-api`
 
 ### Testing (Ping)
 
