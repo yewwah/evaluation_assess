@@ -4,6 +4,7 @@ This README documents the steps to run task 2. This folder uses FastAPI framewor
 
 ## Assumptions
 1. User has `docker` rights
+2. User has the sample files on the system or the mp3 files are accessible
 
 ## Steps to run the folder
 
