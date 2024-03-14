@@ -11,5 +11,6 @@ The `requirements.txt` are also in the respective folders
 4. Docker has been installed 
 
 # Deployment URL 
-# TODO: 
-The deployment URL is as follows : `http://<>:PORT_NUMBER`
+The deployment URL is as follows : `http://3.25.121.36:PORT_NUMBER/<ENDPOINT>`
+
+E.g for asr, it would be `http://3.25.121.36:8001/`
