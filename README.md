@@ -8,7 +8,8 @@ The `requirements.txt` are also in the respective folders
 1. No security concerns
 2. User is using ubuntu OS 22.XX
 3. User has `sudo` access
-4. Docker has been installed 
+4. Docker has been installed
+5. Machine has sufficient memory to load all the containers (>4 GB)
 
 # Deployment URL 
 The deployment URL is as follows : `http://3.25.121.36:PORT_NUMBER/<ENDPOINT>`
