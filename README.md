@@ -12,6 +12,6 @@ The `requirements.txt` are also in the respective folders
 5. Machine has sufficient memory to load all the containers (>4 GB)
 
 # Deployment URL 
-The deployment URL is as follows : `http://3.25.121.36:PORT_NUMBER/<ENDPOINT>`
+The deployment URL is as follows : `http://100.26.166.141:PORT_NUMBER/<ENDPOINT>`
 
-E.g for asr, it would be `http://3.25.121.36:8001/`
+E.g for asr, it would be `http://100.26.166.141:8001/`
