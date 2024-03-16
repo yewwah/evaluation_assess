@@ -10,7 +10,8 @@ The `requirements.txt` are also in the respective folders
 3. User has `sudo` access
 4. Docker has been installed
 5. Machine has sufficient memory to load all the containers (>4 GB)
-
+6. `Python` refers to `python=3.11` and `pip` is available
+   
 # Deployment URL 
 The deployment URL is as follows : `http://100.26.166.141:PORT_NUMBER/<ENDPOINT>`
 
