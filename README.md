@@ -13,6 +13,6 @@ The `requirements.txt` are also in the respective folders
 6. `Python` refers to `python=3.11` and `pip` is available
    
 # Deployment URL 
-The deployment URL is as follows : `http://100.26.166.141:PORT_NUMBER/<ENDPOINT>`
+The deployment URL is as follows : `http://54.157.162.129:PORT_NUMBER/<ENDPOINT>`
 
-E.g for asr, it would be `http://100.26.166.141:8001/`
+E.g for asr, it would be `http://54.157.162.129:8001/`
